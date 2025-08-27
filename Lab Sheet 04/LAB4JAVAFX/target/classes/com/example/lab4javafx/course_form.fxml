@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.lab4javafx.Controller.CourseController" spacing="10" alignment="CENTER" prefWidth="400">
+
+    <Label text="Course Form" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="cidField" promptText="Course ID"/>
+    <TextField fx:id="cnameField" promptText="Course Name"/>
+    <TextArea fx:id="descriptionField" promptText="Description"/>
+    <TextField fx:id="feeField" promptText="Course Fee"/>
+
+    <Button text="Add Course" onAction="#addCourse"/>
+
+    <TableView fx:id="courseTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="cidCol" text="CID" prefWidth="80"/>
+            <TableColumn fx:id="cnameCol" text="Name" prefWidth="120"/>
+            <TableColumn fx:id="descCol" text="Description" prefWidth="120"/>
+            <TableColumn fx:id="feeCol" text="Fee" prefWidth="80"/>
+        </columns>
+    </TableView>
+</VBox>

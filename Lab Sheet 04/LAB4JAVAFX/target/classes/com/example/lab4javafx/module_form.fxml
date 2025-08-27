@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.lab4javafx.Controller.ModuleController">
+
+    <TextField fx:id="txtMID" promptText="Module ID"/>
+    <TextField fx:id="txtMName" promptText="Module Name"/>
+    <TextArea fx:id="txtMDesc" promptText="Module Description" prefRowCount="3"/>
+
+    <HBox spacing="10">
+        <Button text="Add Module" onAction="#addModule"/>
+        <Button text="Delete Module" onAction="#deleteModule"/>
+    </HBox>
+
+    <TableView fx:id="moduleTable" prefHeight="200">
+        <columns>
+            <TableColumn fx:id="colMID" text="MID"/>
+            <TableColumn fx:id="colMName" text="Module Name"/>
+            <TableColumn fx:id="colMDesc" text="Description"/>
+        </columns>
+    </TableView>
+</VBox>
